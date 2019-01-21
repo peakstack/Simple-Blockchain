@@ -10,12 +10,14 @@ int main()
 {
     Keccak keccak;
     block genesis_block = block(block_chain.size());
-    genesis_block.m_hash = keccak("00");
+    genesis_block.m_hash = keccak("0");
     genesis_block.m_previous_block = &genesis_block;
     genesis_block.mine(block_chain.m_difficulty);
     block_chain.add_block(genesis_block);
 
     mine_blocks(200);
+
+    std::cout << "blockchain is " << (block_chain.is_valid() ? "valid" : "not valid") << std::endl;
 }
 
 void mine_blocks(int times)
