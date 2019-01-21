@@ -12,6 +12,7 @@ public:
     void add_block(block& target_block);
     block& get_block(uint_fast64_t index);
     block& get_last();
+    bool is_valid();
     block& get_genesis();
     uint_fast64_t size();
 
