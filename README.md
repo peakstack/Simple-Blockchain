@@ -1,2 +1,2 @@
 # Simple-Blockchain
-a simple blockchain made in c++ with ability to mine blocks using keccak256 hash algorithm
+a simple blockchain made in c++ with ability to mine blocks using SHA3-256 hash algorithm
