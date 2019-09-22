@@ -21,7 +21,7 @@ void block::mine(uint_fast64_t difficulty)
         m_hash = calculate_hash();
     }
     while (m_hash.substr(0, difficulty) != hash_string);
-    printf("block mined: %s\n", m_hash.c_str());
+    std::cout << "block mined: " << m_hash.c_str() << std::endl;
 }
 
 std::string const block::calculate_hash()
