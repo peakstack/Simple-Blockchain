@@ -22,12 +22,9 @@ block& blockchain::get_block(uint_fast64_t index)
 
 bool blockchain::is_valid()
 {
-    for (uint_fast64_t i = 0; i < blockchain::size(); ++i)
+    //skipping block 0 (genesis block)
+    for (uint_fast64_t i = 1; i < blockchain::size(); ++i)
     {
-        if(i == 0)
-        {
-            continue;
-        }
         block& current_block = blockchain::get_block(i);
         block& previous_block = blockchain::get_block(i - 1);
 
