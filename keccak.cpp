@@ -18,7 +18,7 @@ Keccak::Keccak(Bits bits)
 /// restart
 void Keccak::reset()
 {
-  for (unsigned long long &i : m_hash) i = 0;
+  for (auto &i : m_hash) i = 0;
   m_numBytes   = 0;
   m_bufferSize = 0;
 }

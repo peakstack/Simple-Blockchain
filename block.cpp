@@ -24,7 +24,7 @@ void block::mine(uint_fast64_t difficulty)
     std::cout << "block mined: " << m_hash.c_str() << std::endl;
 }
 
-std::string const block::calculate_hash()
+std::string block::calculate_hash()
 {
     std::stringstream string_stream;
     string_stream << m_index;

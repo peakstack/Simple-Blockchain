@@ -16,7 +16,7 @@ block& blockchain::get_block(uint_fast64_t index)
     }
     else
     {
-        throw __cpp_lib_uncaught_exceptions;
+        throw std::exception();
     }
 }
 

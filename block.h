@@ -11,13 +11,13 @@
 class block {
 public:
     std::string m_hash;
-    block *m_previous_block;
+    block *m_previous_block{};
 
     uint_fast64_t m_index, m_nonce;
-    __time64_t m_timestamp;
+    time_t m_timestamp{};
 
     void mine(uint_fast64_t difficulty);
-    std::string const calculate_hash();
+    std::string calculate_hash();
     void update();
     explicit block(uint_fast64_t index);
 };
